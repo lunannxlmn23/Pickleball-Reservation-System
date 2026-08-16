@@ -61,7 +61,7 @@
                 <h2>Sign in to PickleReserve</h2>
                 <p class="form-subtext">Access your court reservations and schedules.</p>
 
-                <form method="POST" id = "loginForm" class="login-form">
+                <form id = "loginForm" class="login-form">
 
                     <div class="form-group">
                         <label for="email">Email address</label>
