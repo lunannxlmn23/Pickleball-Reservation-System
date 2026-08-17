@@ -34,20 +34,8 @@
                 <h1>PickleReserve</h1>
                 <p class="tagline">Play. Reserve. Enjoy.</p>
 
-                <!-- Minimal court illustration -->
-                <div class="court-graphic" aria-hidden="true">
-                    <svg viewBox="0 0 280 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="10" y="10" width="260" height="170" rx="4" stroke="#3a5f4c" stroke-width="2" />
-                        <line x1="10" y1="95" x2="270" y2="95" stroke="#D6E35F" stroke-width="2.5" />
-                        <line x1="10" y1="53" x2="270" y2="53" stroke="#3a5f4c" stroke-width="1.6" />
-                        <line x1="10" y1="137" x2="270" y2="137" stroke="#3a5f4c" stroke-width="1.6" />
-                        <line x1="140" y1="10" x2="140" y2="53" stroke="#3a5f4c" stroke-width="1.6" />
-                        <line x1="140" y1="137" x2="140" y2="180" stroke="#3a5f4c" stroke-width="1.6" />
-                    </svg>
-                </div>
-
                 <p class="brand-footnote">
-                    Book courts, manage schedules, and track reservations all in one place for players.
+                    Your easy place to plan a game, reserve a court, and get back to playing.
                 </p>
 
             </div>
@@ -104,7 +92,7 @@
                     </div>
 
                     <button type="submit" class="btn-login">Log In</button>
-                    <label for="link">Don't have an account? <a href="register.php">Sign up</a></label>
+                    <p class="form-switch">New to PickleReserve? <a href="register.php">Create an account</a></p>
 
                 </form>
 

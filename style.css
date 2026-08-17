@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;600;700&display=swap');
 
 :root {
-    --bg: #f4f8f4;
-    --card: #ffffff;
+    --bg: #edf3ec;
+    --card: #fffef9;
 
     --primary: #2f7a4d;
     --primary-dark: #163c2c;
     --primary-hover: #24633e;
-    --panel-dark: #12291f;
+    --panel-dark: #173c2c;
 
     --accent-light: #e7f3ea;
     --accent-line: rgba(255, 255, 255, 0.14);
 
     --ball: #d6e35f;
 
-    --border: #dce5dd;
+    --border: #d7e1d6;
 
     --text: #1f2d23;
     --muted: #65736c;
@@ -44,7 +44,7 @@ html, body {
 body {
     font-family: var(--body-font);
     color: var(--text);
-    background: var(--bg);
+    background: linear-gradient(135deg, #edf3ec 0%, #f7f4eb 100%);
 }
 
 /* ==============================
@@ -55,6 +55,8 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-columns: 45% 55%;
+    padding: 20px;
+    gap: 20px;
 }
 
 /* ==============================
@@ -72,36 +74,37 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    padding: 56px 56px;
+    padding: clamp(40px, 6vw, 76px);
+    border-radius: 28px;
+    box-shadow: 0 18px 45px rgba(20, 55, 38, 0.15);
 }
 
 .brand-panel::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.06) 1px, transparent 0);
-    background-size: 24px 24px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.035), transparent 48%);
     pointer-events: none;
 }
 
 .brand-content {
     position: relative;
     z-index: 1;
-    max-width: 360px;
+    max-width: 390px;
 }
 
 .brand-mark {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 44px;
+    margin-bottom: clamp(52px, 10vh, 110px);
 }
 
 .brand-mark .icon-badge {
     width: 38px;
     height: 38px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.08);
+    border-radius: 13px 10px 14px 9px;
+    background: rgba(255, 255, 255, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -123,37 +126,24 @@ body {
 
 .brand-panel h1 {
     font-family: var(--heading-font);
-    font-size: 44px;
+    font-size: clamp(42px, 4.4vw, 58px);
     font-weight: 700;
     line-height: 1.05;
-    letter-spacing: -0.8px;
-    margin-bottom: 16px;
+    letter-spacing: -1.4px;
+    margin-bottom: 14px;
 }
 
 .brand-panel .tagline {
     font-size: 17px;
     font-weight: 500;
     color: var(--ball);
-    margin-bottom: 40px;
-}
-
-/* Court illustration */
-
-.court-graphic {
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 40px;
-}
-
-.court-graphic svg {
-    width: 100%;
-    height: auto;
-    display: block;
+    margin-bottom: 34px;
 }
 
 .brand-panel .brand-footnote {
-    font-size: 13.5px;
-    line-height: 1.6;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.7;
     color: var(--muted-on-dark);
     border-top: 1px solid var(--accent-line);
     padding-top: 20px;
@@ -167,19 +157,22 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 32px;
+    padding: clamp(32px, 6vw, 80px);
+    border-radius: 28px;
+    background: rgba(255, 254, 249, 0.88);
+    box-shadow: 0 18px 45px rgba(52, 70, 52, 0.08);
 }
 
 .login-form-wrap {
     width: 100%;
-    max-width: 380px;
+    max-width: 420px;
 }
 
 .form-eyebrow {
     font-family: var(--heading-font);
     font-size: 13px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--primary);
     margin-bottom: 10px;
@@ -187,10 +180,10 @@ body {
 
 .login-form-wrap h2 {
     font-family: var(--heading-font);
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 700;
     color: var(--primary-dark);
-    letter-spacing: -0.4px;
+    letter-spacing: -0.8px;
     margin-bottom: 10px;
 }
 
@@ -198,7 +191,7 @@ body {
     font-size: 14.5px;
     color: var(--muted);
     line-height: 1.5;
-    margin-bottom: 36px;
+    margin-bottom: 34px;
 }
 
 .login-form {
@@ -206,7 +199,7 @@ body {
 }
 
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .form-group label {
@@ -222,9 +215,9 @@ body {
     height: 48px;
     padding: 0 14px;
     border: 1px solid var(--border);
-    border-radius: 8px;
+    border-radius: 12px;
     outline: none;
-    background: #fbfdfb;
+    background: #f7faf5;
     font-family: var(--body-font);
     font-size: 14.5px;
     color: var(--text);
@@ -242,7 +235,7 @@ body {
 .form-group input:focus {
     border-color: var(--primary);
     background: #ffffff;
-    box-shadow: 0 0 0 3px rgba(47, 122, 77, 0.12);
+    box-shadow: 0 0 0 4px rgba(47, 122, 77, 0.11);
 }
 
 /* Password */
@@ -267,7 +260,7 @@ body {
     justify-content: center;
     padding: 0;
     border: none;
-    border-radius: 6px;
+    border-radius: 9px;
     background: transparent;
     color: var(--muted);
     cursor: pointer;
@@ -296,7 +289,7 @@ body {
     height: 50px;
     margin-top: 8px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     background: var(--primary);
     color: #ffffff;
     font-family: var(--body-font);
@@ -304,11 +297,14 @@ body {
     font-weight: 600;
     letter-spacing: 0.1px;
     cursor: pointer;
-    transition: background-color 0.15s ease, transform 0.1s ease;
+    box-shadow: 0 7px 14px rgba(47, 122, 77, 0.17);
+    transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
 
 .btn-login:hover {
     background: var(--primary-hover);
+    box-shadow: 0 9px 18px rgba(47, 122, 77, 0.23);
+    transform: translateY(-1px);
 }
 
 .btn-login:active {
@@ -319,17 +315,8 @@ body {
     outline: 2px solid var(--primary-dark);
     outline-offset: 3px;
 }
-form label[for="link"]{
-    font-size: 13px;
-    align-items: center;
-}
-form label[for="link"] a{
-    color: var(--primary);
-    text-decoration: none;
-}
-
 .form-switch {
-    margin-top: 16px;
+    margin-top: 18px;
     text-align: center;
     font-size: 13px;
     color: var(--muted);
@@ -342,7 +329,7 @@ form label[for="link"] a{
 }
 
 .form-switch a:hover,
-form label[for="link"] a:hover {
+.form-switch a:focus-visible {
     text-decoration: underline;
 }
 /* Error message */
@@ -366,6 +353,8 @@ form label[for="link"] a:hover {
 @media (max-width: 900px) {
     .page {
         grid-template-columns: 1fr;
+        padding: 12px;
+        gap: 12px;
     }
 
     .brand-panel {
@@ -386,17 +375,12 @@ form label[for="link"] a:hover {
         margin-bottom: 24px;
     }
 
-    .court-graphic {
-        max-width: 220px;
-        margin-bottom: 24px;
-    }
-
     .brand-panel .brand-footnote {
-        display: none;
+        max-width: 390px;
     }
 
     .login-panel {
-        padding: 36px 24px 48px;
+        padding: 40px 24px 48px;
     }
 }
 
