@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PickleReserve | Create Account</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
     <div class="page">
@@ -12,6 +13,7 @@
             <div class="brand-content">
                 <div class="brand-mark">
                     <div class="icon-badge">
+                        <i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <rect x="6" y="2.5" width="10.5" height="13" rx="5.25" fill="#ffffff" />
                             <rect x="9.6" y="14.5" width="3.3" height="7" rx="1.65" fill="#ffffff" />

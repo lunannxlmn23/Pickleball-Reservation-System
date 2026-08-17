@@ -8,6 +8,7 @@
     <title>PickleReserve | Court Reservation System</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -20,6 +21,7 @@
 
                 <div class="brand-mark">
                     <div class="icon-badge">
+                        <i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i>
                         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <!-- Paddle face (filled, flush handle — reads clearly at small size) -->
                             <rect x="6" y="2.5" width="10.5" height="13" rx="5.25" fill="#ffffff" />
