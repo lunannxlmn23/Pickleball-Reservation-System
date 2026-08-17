@@ -9,10 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email'] ?? '');
     $password = $_POST['password'] ?? '';
 
-    $sql = "SELECT * FROM users WHERE email = ? AND password = ?";
+    $sql = "SELECT * FROM users WHERE email = ? LIMIT 1";
 
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $email, $password);
+    $stmt->bind_param("s", $email);
     $stmt->execute();
 
     $result = $stmt->get_result();
@@ -20,6 +20,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($result->num_rows === 1) {
 
         $user = $result->fetch_assoc();
+
+        // Supports existing plain-text accounts while new registrations use password hashes.
+        $validPassword = password_verify($password, $user['password']) || hash_equals($user['password'], $password);
+
+        if (!$validPassword) {
+            echo json_encode(['success' => false, 'message' => 'Invalid Email or Password']);
+            $stmt->close();
+            exit();
+        }
 
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["fullname"] = $user["fullname"];

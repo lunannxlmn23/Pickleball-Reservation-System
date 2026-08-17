@@ -327,6 +327,24 @@ form label[for="link"] a{
     color: var(--primary);
     text-decoration: none;
 }
+
+.form-switch {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.form-switch a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.form-switch a:hover,
+form label[for="link"] a:hover {
+    text-decoration: underline;
+}
 /* Error message */
 
 .message {
